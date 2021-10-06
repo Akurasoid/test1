@@ -1,3 +1,4 @@
 Torvald
 Olga - Nyva
-
+C.UTF-8
+/home/ak01
