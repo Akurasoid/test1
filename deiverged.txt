@@ -1,3 +1,0 @@
-diverge
-diverge remote
-diverge on local
