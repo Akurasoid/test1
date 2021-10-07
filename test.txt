@@ -1,4 +1,3 @@
 Torvald
 Olga - Nyva
 C.UTF-8
-newline2
