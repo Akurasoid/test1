@@ -1,0 +1,8 @@
+---
+- hosts: nodes
+  gather_facts: true
+  become: true
+  ignore_errors: true
+  tasks:
+    - name: gathering IP addresses from remote hosts 
+      debug: var=ansible_all_ipv4_addresses

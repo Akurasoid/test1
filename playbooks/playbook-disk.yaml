@@ -1,0 +1,8 @@
+---
+- hosts: nodes
+  gather_facts: true
+  become: true
+  tasks:
+    - name: disk_mounts 
+      debug: var=ansible_mounts
+

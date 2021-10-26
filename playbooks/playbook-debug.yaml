@@ -1,0 +1,15 @@
+---
+- hosts: nodes
+  gather_facts: false
+  become: true
+  ignore_errors: true
+  tasks:
+    - name: try and copy unexistant file to remote serveres
+      copy:
+        src: ninja
+        dest: /tmp
+      register: var
+    - name: debugging issue 
+      debug:
+        msg: there is problem "{{ var }}"
+

@@ -1,0 +1,21 @@
+---
+- hosts: web
+  gather_facts: false
+  become: true
+  tasks: 
+    - name: installing project dependencies
+      command: 'pipenv install'
+        arg:
+                creates: '/home/vagrant/flask/Pipfile.lock'
+
+    - name: copy systemd conf file flask
+      copy: 
+        src: ../files/flask.service
+        dest: /etc/systemd/system
+
+    - name: enablinkg and starting flask app
+      systemd:
+              name: flask 
+              state: started
+              daemon_reload: yes
+              enabled: yes

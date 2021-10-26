@@ -1,0 +1,19 @@
+---
+- hosts: nodes
+  gather_facts: false
+  become: true
+  tasks:
+          - name: install tools
+            apt:
+                    name: "{{ item }}"
+                    state: present
+            loop:
+                    - git
+                    - python3
+                    - pipenv
+                    - nginx
+
+          - name: clone from git
+            git:
+                    repo: https://gitlab.com/silent-mobius/flask-example.git
+                    dest: /home/vagrant/flask
