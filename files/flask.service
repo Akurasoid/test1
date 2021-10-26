@@ -1,0 +1,9 @@
+[Unit]
+Description=flask based server
+
+[Service]
+WorkingDirectory=/home/vagrant/flask
+ExecStart=pipenv run gunicorn -w 4 app:app
+
+[Install]
+WantedBy=multi-user.target

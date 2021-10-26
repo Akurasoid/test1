@@ -1,0 +1,15 @@
+---
+- hosts: nodes
+  gather_facts: false 
+  become: true # sometimes 'yes'
+  tasks:
+          - name: install tools:
+            apt: 
+              name: git
+              state: present
+
+          - name: cloning from gitlub
+            git: 
+              repo:  https://gitlab.com/silent-mobius/flask-example
+              dest: /home/vagrant/flask
+

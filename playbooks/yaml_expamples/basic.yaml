@@ -1,0 +1,26 @@
+name: Ak
+lastname: deTelmarande
+address:
+        location: Kyiv
+        street: Lesya Kurbasa
+        number: 10
+address: [localtion: Kyiv, street: Lesya Kurbasa, number: 10]
+
+# Mappings
+- id: 234252342
+  nickname: Akurasan
+
+# sequences
+key: 
+  - value1
+  - value2
+  - value3
+
+- hosts: its_lns-101
+  datacenter:
+    - localtion:
+    - cab:
+    - roles:
+      - web:
+      - db
+      - etc
